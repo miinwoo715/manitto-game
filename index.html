@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>마니또 추측하기 🎯</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Firebase SDK (v8 버전: 호환성 안정) -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="container">
+    <img src="logo.png" alt="PBOB 마니또" class="logo">
+    <p>푸바 2025 연말정산 Time</p>
+
+    <label>내 이름은?</label><br>
+    <select id="myName">
+      <option value="">-- 선택 --</option>
+      <option>민우</option>
+      <option>지현</option>
+      <option>수영</option>
+      <option>지원</option>
+    </select><br>
+
+    <label>내 마니또는 누구였을까...!!</label><br>
+    <select id="guess">
+      <option value="">-- 선택 --</option>
+      <option>민우</option>
+      <option>지현</option>
+      <option>수영</option>
+      <option>지원</option>
+    </select><br>
+
+    <button id="submitBtn">제출하쇼!</button>
+    <p id="msg"></p>
+  </div>
+</body>
+</html>

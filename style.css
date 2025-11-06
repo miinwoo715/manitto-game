@@ -1,0 +1,190 @@
+/* 🎮 도트/픽셀 스타일 (한글 지원) */
+@import url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+@font-face {
+  font-family: 'DungGeunMo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'DungGeunMo', 'Press Start 2P', cursive;
+  background: #1a1a2e;
+  background-image: 
+    repeating-linear-gradient(
+      0deg, 
+      transparent, 
+      transparent 2px, 
+      rgba(255,255,255,0.03) 2px, 
+      rgba(255,255,255,0.03) 4px
+    ),
+    repeating-linear-gradient(
+      90deg, 
+      transparent, 
+      transparent 2px, 
+      rgba(255,255,255,0.03) 2px, 
+      rgba(255,255,255,0.03) 4px
+    );
+  text-align: center;
+  padding: 60px 20px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  image-rendering: pixelated;
+}
+
+.container {
+  background: #16213e;
+  display: inline-block;
+  padding: 30px 40px;
+  border: 4px solid #0f3460;
+  box-shadow: 
+    0 0 0 4px #16213e,
+    0 0 0 8px #0f3460,
+    8px 8px 0 8px rgba(0,0,0,0.3);
+  position: relative;
+  max-width: 500px;
+}
+
+/* 픽셀 코너 장식 */
+.container::before,
+.container::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #e94560;
+  box-shadow: 0 0 10px #e94560;
+}
+
+.container::before {
+  top: -6px;
+  left: -6px;
+}
+
+.container::after {
+  bottom: -6px;
+  right: -6px;
+}
+
+.logo {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  margin-bottom: 15px;
+  filter: drop-shadow(4px 4px 0 #0f3460);
+}
+
+p {
+  color: #e94560;
+  font-size: 24px;
+  margin: 15px 0;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+}
+
+label {
+  display: block;
+  color: #00d9ff;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  text-align: center;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+}
+
+select {
+  font-family: 'DungGeunMo', cursive;
+  font-size: 14px;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 3px solid #0f3460;
+  background: #1a1a2e;
+  color: #00d9ff;
+  width: 100%;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 rgba(0,0,0,0.3);
+  transition: all 0.1s;
+  image-rendering: pixelated;
+}
+
+select:hover {
+  background: #0f3460;
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 rgba(0,0,0,0.3);
+}
+
+select:focus {
+  outline: none;
+  border-color: #e94560;
+  box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.3);
+}
+
+button {
+  font-family: 'DungGeunMo', cursive;
+  font-size: 18px;
+  padding: 15px 30px;
+  margin: 20px 0;
+  border: 4px solid #00d9ff;
+  background: #e94560;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 
+    4px 4px 0 #0f3460,
+    8px 8px 0 rgba(0,0,0,0.3);
+  transition: all 0.1s;
+  position: relative;
+  width: 100%;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  background: #ff6b6b;
+  transform: translate(-2px, -2px);
+  box-shadow: 
+    6px 6px 0 #0f3460,
+    10px 10px 0 rgba(0,0,0,0.3);
+}
+
+button:active {
+  transform: translate(4px, 4px);
+  box-shadow: 
+    0px 0px 0 #0f3460,
+    2px 2px 0 rgba(0,0,0,0.3);
+}
+
+button:disabled {
+  background: #555;
+  border-color: #777;
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: none;
+  box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
+}
+
+#msg {
+  font-size: 14px;
+  line-height: 1.8;
+  padding: 15px;
+  margin-top: 15px;
+  border: 3px solid transparent;
+  min-height: 50px;
+  background: rgba(0,0,0,0.3);
+  letter-spacing: 0.5px;
+}
+
+#msg:not(:empty) {
+  animation: blink 0.5s;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0.5; }
+}
