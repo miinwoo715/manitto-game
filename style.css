@@ -118,10 +118,10 @@ p {
 label {
   display: block;
   color: #00d9ff;
-  font-size: 12px;
+  font-size: 20px;
   margin-top: 20px;
   margin-bottom: 8px;
-  text-align: left;
+  text-align: center;
   line-height: 1.6;
   letter-spacing: 0.5px;
 }
