@@ -109,7 +109,7 @@ body {
 
 p {
   color: #e94560;
-  font-size: 12px;
+  font-size: 20px;
   margin: 15px 0;
   line-height: 1.8;
   letter-spacing: 0.5px;
@@ -118,9 +118,9 @@ p {
 label {
   display: block;
   color: #00d9ff;
-  font-size: 20px;
-  margin-top: 20px;
-  margin-bottom: 8px;
+  font-size: 18px;
+  margin-top: 8px;
+  margin-bottom: -10px;
   text-align: center;
   line-height: 1.6;
   letter-spacing: 0.5px;
@@ -222,9 +222,9 @@ button:disabled {
 }
 
 #msg {
-  font-size: 13px;
+  font-size: 10px;
   line-height: 1.8;
-  padding: 15px;
+  padding: 10px;
   margin-top: 15px;
   border: 3px solid transparent;
   min-height: 50px;
