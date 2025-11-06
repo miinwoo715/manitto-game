@@ -16,10 +16,10 @@ const db = firebase.database();
 
 // 정답표 (사회자만 아는 데이터)
 const manittoMap = {
-  "민우": "수영",
-  "지현": "지원",
-  "수영": "민재",
-  "지원": "민우"
+  "민우": "주하",
+  "주하": "기원",
+  "기원": "유진",
+  "유진": "민우"
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const guessSelect = document.getElementById("guess");
 
   // 전체 인원 리스트
-  const allNames = ["민우", "지현", "수영", "지원"];
+  const allNames = ["민우", "주하", "기원", "유진"];
 
   // ✅ [1] 오늘 이미 제출했는지 확인
   const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
@@ -87,3 +87,4 @@ document.addEventListener("DOMContentLoaded", () => {
     msg.innerText = "✅ 제출 완! 오늘은 여기까지~ 내일 다시 시도!";
   });
 });
+
